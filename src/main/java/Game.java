@@ -31,12 +31,13 @@ public abstract class Game {
         userArrayList.add(newUser);
     }
 
-    public void userNamePrompt(){
+    public String userNamePrompt(){
         Scanner input = new Scanner(System.in);
         System.out.println("Player 1 enter your name");
         String userName = input.nextLine();
         User newUser = new User(userName);
         addUser(newUser);
+        return userName;
     }
 
     public void userNamePrompt(int playerNum){
