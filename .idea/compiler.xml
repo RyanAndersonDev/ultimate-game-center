@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="TheUltimateGameCenter" />
+        <module name="the-ultimate-game-center" />
       </profile>
     </annotationProcessing>
   </component>
