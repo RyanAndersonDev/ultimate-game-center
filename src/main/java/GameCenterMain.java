@@ -1,17 +1,13 @@
-import menu.RandomStatementSelector;
-import menu.UserInputGameSelector;
-import menu.WelcomeMessages;
-import games.Game;
-
-import java.util.Scanner;
+import menu.UserGameSelection;
+import menu.Messages;
 
 public class GameCenterMain {
     public static void main(String[] args) {
 
-        System.out.println(WelcomeMessages.WELCOME_MESSAGE);
+        System.out.println(Messages.WELCOME_MESSAGE + Messages.USER_PROMPT + Messages.GAMES_PRESENTATION);
 
-        UserInputGameSelector gameSelection = new UserInputGameSelector();
-        String sanitizedInput = gameSelection.getUserInputAndSelectGame();
-//        System.out.println(gameSelection.getUserInputAndSelectGame());
+        UserGameSelection gameSelection = new UserGameSelection();
+        gameSelection.getUserInputAndSelectGame();
+
     }
 }
