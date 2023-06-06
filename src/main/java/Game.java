@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public abstract class Game {
 //variables
@@ -28,6 +29,32 @@ public abstract class Game {
 //methods
     public void addUser(User newUser){
         userArrayList.add(newUser);
+    }
+
+    public void userNamePrompt(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Player 1 enter your name");
+        String userName = input.nextLine();
+        User newUser = new User(userName);
+        addUser(newUser);
+    }
+
+    public void userNamePrompt(int playerNum){
+        for (int i = 0; i < playerNum; i++) {
+            Scanner input = new Scanner(System.in);
+            System.out.println("Player " + (playerNum + 1) + " enter your name");
+            String userName = input.nextLine();
+            User newUser = new User(userName);
+            addUser(newUser);
+        }
+    }
+
+    public void multiUserNamePrompt(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("How many players will you have?");
+        int numberOfPlayersInput = Integer.parseInt(input.nextLine());
+        setNumberOfPlayers(numberOfPlayersInput);
+        userNamePrompt(getNumberOfPlayers());
     }
 
 //required methods
