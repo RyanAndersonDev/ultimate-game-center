@@ -1,3 +1,5 @@
+package game;
+
 public class User {
 //variables
     private String userName;

@@ -1,9 +1,12 @@
-import javax.naming.Name;
+package game;
+
+import game.Game;
+
 import java.util.Scanner;
 
-public class Uno extends Game{
+public class Uno extends Game {
 //variables
-    private final String NAME = "Uno";
+    private final String NAME = "game.Uno";
 
 //constructor
     public Uno(){
