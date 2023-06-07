@@ -1,9 +1,12 @@
-import javax.naming.Name;
+package game;
+
+import game.Game;
+
 import java.util.Scanner;
 
-public class Uno extends Game{
+public class Uno extends Game {
 //variables
-    private final String NAME = "Uno";
+    private final String NAME = "game.Uno";
 
 //constructor
     public Uno(){
@@ -11,7 +14,7 @@ public class Uno extends Game{
     }
 
 //Methods
-    public void runGame(){ //The Run Game will be the main method for Uno
+    public void runGame(){ //The Run game.game.Game will be the main method for game.Uno
         Scanner input = new Scanner(System.in);
         System.out.println("How many players will you have?");
         int numberOfPlayersInput = Integer.parseInt(input.nextLine());
@@ -22,7 +25,7 @@ public class Uno extends Game{
             User newUser = new User(userName);
             addUser(newUser);
         }
-        System.out.println("Uno is running!"); //placeholder test for running from menu
+        System.out.println("game.Uno is running!"); //placeholder test for running from menu
     }
 
 

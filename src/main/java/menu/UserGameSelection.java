@@ -1,5 +1,7 @@
 package menu;
 
+import game.*;
+
 import java.util.Scanner;
 
 public class UserGameSelection {
@@ -11,14 +13,14 @@ public class UserGameSelection {
 
     }
 
-    public void setUserInput(String userInput) {
+    private void setUserInput(String userInput) {
         this.userInput = userInput;
     }
-    public String getUserInput() {
+    private String getUserInput() {
         return userInput;
     }
 
-    public String getUserInputAndSelectGame() {
+    public Game getUserInputAndSelectGame() {
         boolean isValid = false;
 
         while(!isValid) {
@@ -26,31 +28,47 @@ public class UserGameSelection {
                 case "1":
                     System.out.println(Messages.ROUTE_CALCULATION + "Planet Mastermind...\n" + RandomStatementSelector.getRandomTakeoffStatement());
                     isValid = true;
+                    if(isValid) {
+                        Mastermind game = new Mastermind();
+                        return game;
+                    }
                     break;
 
                 case "2":
                     System.out.println(Messages.ROUTE_CALCULATION + "the Terminal orbit...\n" + RandomStatementSelector.getRandomTakeoffStatement());
                     isValid = true;
+                    if(isValid) {
+                        TerminalCreator game = new TerminalCreator();
+                        return game;
+                    }
+
                     break;
 
                 case "3":
                     System.out.println(Messages.ROUTE_CALCULATION + "the UNO system...\n" + RandomStatementSelector.getRandomTakeoffStatement());
                     isValid = true;
+                    if(isValid) {
+                        Uno game = new Uno();
+                        return game;
+                    }
                     break;
 
                 case "4":
                     System.out.println(Messages.ROUTE_CALCULATION + "an adventurous realm...\n" + RandomStatementSelector.getRandomTakeoffStatement());
                     isValid = true;
+                    if(isValid) {
+                        InterdimensionalArena game = new InterdimensionalArena();
+                        return game;
+                    }
                     break;
 
                 default:
-                    System.out.println(Messages.INVALID_INPUT + "\n");
-                    System.out.println(Messages.USER_PROMPT + Messages.GAMES_PRESENTATION);
+                    System.out.println(Messages.INVALID_INPUT + "\n" + Messages.USER_PROMPT + Messages.GAMES_PRESENTATION);
                     setUserInput(scanner.nextLine());
                     break;
             }
         }
-        return getUserInput();
+        return null;
     }
 
 }

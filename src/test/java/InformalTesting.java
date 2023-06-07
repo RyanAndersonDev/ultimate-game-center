@@ -1,3 +1,5 @@
+import game.*;
+
 public class InformalTesting {
     public static void main(String[] args) {
         Game mastermind = new Mastermind();
