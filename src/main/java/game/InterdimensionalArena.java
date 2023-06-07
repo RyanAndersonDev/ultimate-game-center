@@ -12,7 +12,7 @@ public class InterdimensionalArena extends Game {
     }
 
 //Methods
-    public void runGame(){ //The Run game.game.Game will be the main method for game.Mastermind
-        System.out.println("Interdimensional Arena is running!"); //placeholder test for running from menu
+    public void runGame(){ //The Run Game will be the main method for Mastermind
+        userNamePrompt();
     }
 }
