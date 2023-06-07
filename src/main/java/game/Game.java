@@ -43,14 +43,16 @@ public abstract class Game {
         return userName;
     }
 
-    public void userNamePrompt(int playerNum){
+    public String userNamePrompt(int playerNum){
+        String userName = "";
         for (int i = 0; i < playerNum; i++) {
             Scanner input = new Scanner(System.in);
             System.out.println("Player " + (playerNum + 1) + " enter your name");
-            String userName = input.nextLine();
+            userName = input.nextLine();
             User newUser = new User(userName);
             addUser(newUser);
         }
+        return userName;
     }
 
     public void multiUserNamePrompt(){
