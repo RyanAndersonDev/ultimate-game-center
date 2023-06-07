@@ -1,4 +1,8 @@
+package game;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public abstract class Game {
 //variables

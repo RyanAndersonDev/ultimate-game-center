@@ -8,7 +8,7 @@ public class Messages {
 
     public static final String USER_PROMPT = "Please select an ULTIMATE Game to travel to. (Enter a number to chart your course)\n";
 
-    public static final String GAMES_PRESENTATION = "\n[1] Mastermind\n \n[2] Terminal Creator\n \n[3] UNO\n \n[4] Interdimensional Arena\n";
+    public static final String GAMES_PRESENTATION = "\n[1] Mastermind\n \n[X] Terminal Creator\n \n[X] UNO\n \n[X] Interdimensional Arena\n";
 
     public static final String INVALID_INPUT = "\nYour input did not match a valid game option, traveller. Please try again, the fate of the multiverse depends on it.";
 
